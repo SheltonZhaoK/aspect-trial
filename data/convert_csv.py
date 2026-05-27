@@ -40,7 +40,7 @@ key_map = {
 }
 
 data = []
-with open('/mnt/user-data/uploads/merged_rule_level_summary_final.csv', 'r', encoding='utf-8') as f:
+with open('merged_rule_level_summary_final.csv', 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     for row in reader:
         new_row = {}
@@ -57,5 +57,5 @@ with open('/mnt/user-data/uploads/merged_rule_level_summary_final.csv', 'r', enc
                 new_row[short_key] = v
         data.append(new_row)
 
-with open('/home/claude/website/data/rules.json', 'w') as f:
+with open('rules.json', 'w') as f:
     json.dump(data, f, separators=(',', ':'))

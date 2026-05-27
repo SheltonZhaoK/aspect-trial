@@ -207,7 +207,7 @@ function buildColumnPanel() {
 // Update Statistics Display
 function updateStats() {
     document.getElementById('statRules').textContent = state.data.length.toLocaleString();
-    document.getElementById('statTrials').textContent = '285';
+    document.getElementById('statTrials').textContent = '249';
     document.getElementById('statCancers').textContent = new Set(state.data.map(d => d.ct)).size;
     document.getElementById('statPatients').textContent = '20,126';
 }
